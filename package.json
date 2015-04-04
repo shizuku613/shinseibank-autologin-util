@@ -1,0 +1,30 @@
+{
+  "name": "shinseibank-autologin-tool",
+  "version": "1.0.0",
+  "description": "Tool for shinseibank-autologin-ext",
+  "main": "index.js",
+  "files": [
+    "lib",
+    "index.js",
+    "LICENSE",
+    "*.md"
+  ],
+  "scripts": {
+    "test": "mocha test/**/*-test.js"
+  },
+  "author": {
+    "name": "Shizuku Kono",
+    "email": "shizukukn@gmail.com",
+    "url": "https://github.com/shizuku613"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shizuku613/shinseibank-autologin-tool.git"
+  },
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "mocha": "^2.2.1"
+  },
+  "license": "MIT",
+  "private": true
+}
