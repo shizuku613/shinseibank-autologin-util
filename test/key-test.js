@@ -1,5 +1,8 @@
 /*jslint node: true */
-/*globals describe, it */
+/*globals describe, it, before */
+
+var path = require('path');
+var fs = require('fs');
 
 var chai = require('chai');
 var expect = chai.expect;
@@ -33,6 +36,28 @@ describe('Test for lib/key.js', function () {
     it('should have property `created`', function () {
       expect(key).to.have.property('created').that.is.an.instanceof(Date);
       expect(new Date() - key.created).to.be.below(500);
+    });
+  });
+  
+  describe('writeFile', function () {
+    it('should succeed to write keyfile', function (done) {
+      libKey.generateKey(128, function (err, k) {
+        if (err) { return done(err); }
+        
+        var f = path.join(__dirname, 'tmp.key');
+        libKey.writeKeyfile(f, k, function (err) {
+          if (err) { return done(err); }
+          
+          fs.readFile(f, function (err, bytes) {
+            if (err) { return done(err); }
+            
+            var k2 = JSON.parse(bytes);
+            expect(JSON.parse(JSON.stringify(k))).to.deep.equal(k2);
+            
+            done();
+          });
+        });
+      });
     });
   });
 });
