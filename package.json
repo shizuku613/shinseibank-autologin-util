@@ -1,5 +1,5 @@
 {
-  "name": "shinseibank-autologin-tool",
+  "name": "shinseibank-autologin-util",
   "version": "1.0.0",
   "description": "Tool for shinseibank-autologin-ext",
   "main": "index.js",
