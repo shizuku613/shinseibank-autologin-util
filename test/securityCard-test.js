@@ -1,3 +1,5 @@
+'use strict';
+
 /*jslint node: true */
 /*globals describe, it */
 
