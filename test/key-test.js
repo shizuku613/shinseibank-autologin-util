@@ -39,7 +39,7 @@ describe('Test for lib/key.js', function () {
     });
   });
   
-  describe('writeFile', function () {
+  describe('writeKeyfile', function () {
     it('should succeed to write keyfile', function (done) {
       libKey.generateKey(128, function (err, k) {
         if (err) { return done(err); }
