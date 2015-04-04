@@ -1,6 +1,6 @@
 {
   "name": "shinseibank-autologin-util",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Tool for shinseibank-autologin-ext",
   "main": "index.js",
   "files": [
